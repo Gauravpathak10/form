@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comforter&family=Heebo:wght@200;300&family=Mochiy+Pop+P+One&family=Roboto:wght@100&family=Shippori+Antique+B1&display=swap"
+        rel="stylesheet">
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: url('./photo-1579546929518-9e396f3cc809.jfif'), rgba(0, 0, 0, 0.1);
+        background-blend-mode: lighten;
+        background-size: cover;
+        text-transform: capitalize;
+    }
+
+    div {
+        width: 300px;
+        padding: 10px;
+        height: 350px;
+        text-align: center;
+        box-shadow: 0px 0px 6px 1px grey;
+    }
+
+    button {
+        display: block;
+        width: 70px;
+        text-align: center;
+        padding: 10px;
+        background: blue;
+        color: white;
+        text-transform: capitalize;
+        border: none;
+        margin: auto;
+    }
+
+    input {
+        margin: 5px;
+        padding: 10px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+    }
+
+    input:focus {
+        background-color: transparent;
+        font-size: 14px;
+        font-weight: bolder;
+        font-family: heebo, sans-serif;
+    }
+
+    p {
+        position: relative;
+    }
+
+    p:before {
+        content: "";
+        position: absolute;
+        top: 40px;
+        background-color: rgb(123, 151, 226);
+        border: 1px solid rgb(123, 151, 226);
+        left: 33%;
+        width: 77px;
+        transform: scaleX(0.5);
+        visibility: hidden;
+    }
+
+    p:hover:before {
+        visibility: visible;
+        transform: scaleX(2.5);
+        transform-origin: center;
+        transition: 1s all;
+    }
+
+    h1 {
+        font-family: 'Shippori Antique B1', sans-serif;
+        font-weight: 700;
+        color: blue;
+    }
+
+
+    .fa-user {
+        color: rgb(243, 13, 90);
+        font-size: 20px;
+    }
+
+    .fa-envelope {
+        color: rgb(47, 255, 168);
+        font-size: 20px;
+    }
+
+    .fa-key {
+        color: blue;
+        font-size: 20px;
+    }
+</style>
+
+<body>
+    <div>
+        <h1>LOGIN</h1>
+        <form action="#">
+            <p><i class="fa fa-user" aria-hidden="true"></i>
+                <input type="name" placeholder="Username" id="name" required>
+            </p>
+            <p><i class="fa fa-envelope" aria-hidden="true"></i>
+                <input type="email" placeholder="Email" id="email" required>
+            </p>
+            <p><i class="fa fa-key" aria-hidden="true"></i>
+                <input type="password" placeholder="passkey" minlength="1" maxlength="5" required id="passkey">
+            </p>
+            <button onclick="click_();">Sign in</button>
+        </form>
+    </div>
+    <script>
+        function click_() {
+            var a = document.getElementsByTagName("input")[0].value;
+            if (a[0]) {
+                alert("Welcome back" + " " + a)
+
+            }
+            else if (a[0] != 0) {
+                alert("Kindly enter your Username");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
